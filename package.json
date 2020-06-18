@@ -1,0 +1,20 @@
+{
+  "name": "aws-amplify-app",
+  "version": "1.0.0",
+  "description": "building app using AWSS Amplify",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mukeshyadav/aws-amplify-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mukeshyadav/aws-amplify-app/issues"
+  },
+  "homepage": "https://github.com/mukeshyadav/aws-amplify-app#readme"
+}
