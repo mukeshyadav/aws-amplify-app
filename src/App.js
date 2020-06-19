@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React, { useState, useEffect } from "react";
 
-function App() {
+// import API from Amplify library
+import { API } from "aws-amplify";
+
+// import query definition
+import { listPosts } from "./graphql/queries";
+
+export default function App() {
+  const [posts, setPosts] = useState([]);
+  useEffect(() => {
+    fetchPosts();
+  }, []);
+  async function fetchPosts() {
+    try {
+      const postData = await API.graphql({ query: listPosts });
+      setPosts(postData.data.listPosts.items);
+    } catch (err) {
+      console.log({ err });
+    }
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Hello World</h1>
+      {posts.map(post => (
+        <div key={post.id}>
+          <h3>{post.name}</h3>
+          <p>{post.location}</p>
+        </div>
+      ))}
     </div>
   );
 }
-
-export default App;
