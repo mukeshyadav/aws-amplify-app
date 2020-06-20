@@ -10,6 +10,11 @@
             "StackName": "amplify-jsnation-dev-230903",
             "StackId": "arn:aws:cloudformation:us-east-1:911973802954:stack/amplify-jsnation-dev-230903/9f2c5f70-b18a-11ea-bc4c-0ec9495d5707",
             "AmplifyAppId": "d35ginkumx5mm7"
+        },
+        "categories": {
+            "auth": {
+                "jsnationd98ac1d6": {}
+            }
         }
     }
 }
