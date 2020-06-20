@@ -1,6 +1,6 @@
 {
     "identityPoolName": "jsnationd98ac1d6_identitypool_d98ac1d6",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "resourceNameTruncated": "jsnatid98ac1d6",
     "userPoolName": "jsnationd98ac1d6_userpool_d98ac1d6",
     "autoVerifiedAttributes": [
